@@ -143,14 +143,7 @@ BlogHub/
 
 ## 👥 Contributors
 
-- **Aleeza Fatima** — Founder & Staff Infrastructure Architect
-- **Sania Fida** — Principal Backend Architect
-- **Sana Akbar** — Design Systems Lead
-- **Amna Kiran** — Senior Frontend Engineer
-- **Tariq Hussain** — Principal Security Researcher
-- **Kubra Batool** — Engineering Director
-- **Munazza Batool** — Lead QA Architect
-- **Ikhlas Hussain** — Principal Database Engineer
+- **Aleeza Fatima** — Founder & Staff Infrastructure 
 
 ---
 
