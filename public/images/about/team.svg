@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="tgrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F2A44" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#tgrad)" />
+  <circle cx="600" cy="280" r="140" fill="#C8461F" opacity="0.15" />
+  <text x="600" y="280" font-family="-apple-system,BlinkMacSystemFont,Inter,sans-serif" font-weight="800" font-size="52" fill="#FFFFFF" text-anchor="middle">EDITORIAL BOARD &amp; TEAM</text>
+  <text x="600" y="340" font-family="JetBrains Mono,monospace" font-weight="500" font-size="24" fill="#C8461F" text-anchor="middle">BlogHub Engineering Community</text>
+</svg>

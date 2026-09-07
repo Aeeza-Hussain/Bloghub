@@ -84,7 +84,7 @@
                     @foreach ($articles as $article)
                     <article class="article-card reveal-item">
                         <div class="article-card-media">
-                            <img src="{{ $article->image }}" alt="{{ $article->title }}" loading="lazy">
+                            <img src="{{ asset($article->image) }}" alt="{{ $article->title }}" loading="lazy">
                             <div class="article-card-badge">
                                 <span class="category-pill {{ $article->category->color ?? 'crimson' }}">
                                     {{ $article->category->name }}
@@ -104,7 +104,7 @@
 
                             <div class="article-card-footer">
                                 <div class="article-card-author">
-                                    <img src="{{ $article->author_avatar ?? 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&auto=format&fit=crop&q=80' }}" alt="{{ $article->author_name }}">
+                                    <img src="{{ $article->author_avatar ? asset($article->author_avatar) : asset('images/defaults/avatar.svg') }}" alt="{{ $article->author_name }}">
                                     <div>
                                         <div class="author-name-text">{{ $article->author_name }}</div>
                                         <div class="article-date-text">{{ $article->published_at ? $article->published_at->format('M d, Y') : $article->created_at->format('M d, Y') }}</div>

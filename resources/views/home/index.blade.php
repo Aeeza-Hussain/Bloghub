@@ -42,10 +42,10 @@
                 {{-- Trust Proof Band --}}
                 <div class="hero-trust-band reveal-item">
                     <div class="avatar-stack">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Reader" class="avatar-stack-item">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Reader" class="avatar-stack-item">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80" alt="Reader" class="avatar-stack-item">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Reader" class="avatar-stack-item">
+                        <img src="{{ asset('images/avatars/avatar-1.svg') }}" alt="Reader" class="avatar-stack-item">
+                        <img src="{{ asset('images/avatars/avatar-2.svg') }}" alt="Reader" class="avatar-stack-item">
+                        <img src="{{ asset('images/avatars/avatar-3.svg') }}" alt="Reader" class="avatar-stack-item">
+                        <img src="{{ asset('images/avatars/avatar-4.svg') }}" alt="Reader" class="avatar-stack-item">
                     </div>
                     <div class="trust-caption">
                         Read by <strong>120,000+ developers</strong> and tech leads worldwide.
@@ -57,7 +57,7 @@
             <div class="reveal-item">
                 <article class="spotlight-card">
                     <div class="spotlight-media">
-                        <img src="{{ $heroArticle['image'] }}" alt="{{ $heroArticle['title'] }}" loading="eager">
+                        <img src="{{ asset($heroArticle['image']) }}" alt="{{ $heroArticle['title'] }}" loading="eager">
                         <div class="spotlight-badge-overlay">
                             <span class="badge badge-brand">
                                 <span class="badge-dot"></span>
@@ -83,7 +83,7 @@
 
                         <div class="article-byline">
                             <div class="author-meta-block">
-                                <img src="{{ $heroArticle['author_avatar'] }}" alt="{{ $heroArticle['author'] }}" class="author-avatar-img">
+                                <img src="{{ asset($heroArticle['author_avatar']) }}" alt="{{ $heroArticle['author'] }}" class="author-avatar-img">
                                 <div>
                                     <div class="author-name">{{ $heroArticle['author'] }}</div>
                                     <div class="author-sub">{{ $heroArticle['author_role'] }} &bull; {{ $heroArticle['date'] }}</div>
@@ -149,7 +149,7 @@
             @foreach ($featuredPosts as $post)
             <article class="article-card reveal-item">
                 <div class="article-card-media">
-                    <img src="{{ $post['image'] }}" alt="{{ $post['title'] }}" loading="lazy">
+                    <img src="{{ asset($post['image']) }}" alt="{{ $post['title'] }}" loading="lazy">
                     <div class="article-card-badge">
                         <span class="category-pill {{ $post['tag_color'] }}">{{ $post['category'] }}</span>
                     </div>
@@ -165,7 +165,7 @@
 
                     <div class="article-card-footer">
                         <div class="article-card-author">
-                            <img src="{{ $post['author_avatar'] }}" alt="{{ $post['author'] }}">
+                            <img src="{{ asset($post['author_avatar']) }}" alt="{{ $post['author'] }}">
                             <div>
                                 <div class="author-name-text">{{ $post['author'] }}</div>
                                 <div class="article-date-text">{{ $post['date'] }}</div>
@@ -237,7 +237,7 @@
         <div class="author-grid">
             @foreach ($authors as $author)
             <div class="author-card reveal-item">
-                <img src="{{ $author['avatar'] }}" alt="{{ $author['name'] }}" class="author-card-avatar" loading="lazy">
+                <img src="{{ asset($author['avatar']) }}" alt="{{ $author['name'] }}" class="author-card-avatar" loading="lazy">
                 <h3 class="author-card-name">{{ $author['name'] }}</h3>
                 <div class="author-card-role">{{ $author['role'] }}</div>
                 <p class="author-card-specialty">{{ $author['specialty'] }}</p>
@@ -304,7 +304,7 @@
                     <p class="testimonial-quote">"{{ $t['quote'] }}"</p>
                 </div>
                 <div class="testimonial-author">
-                    <img src="{{ $t['avatar'] }}" alt="{{ $t['author'] }}" loading="lazy">
+                    <img src="{{ asset($t['avatar']) }}" alt="{{ $t['author'] }}" loading="lazy">
                     <div>
                         <div class="author-name" style="font-size: 0.95rem;">{{ $t['author'] }}</div>
                         <div class="author-sub">{{ $t['role'] }}</div>

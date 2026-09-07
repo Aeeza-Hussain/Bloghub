@@ -13,7 +13,7 @@
 
     {{-- Panoramic Cover Image --}}
     <div style="width: 100%; height: 260px; position: relative; overflow: hidden; background: linear-gradient(135deg, #1E293B, #0F172A);">
-        <img src="{{ $author->cover_image ?? 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1400&auto=format&fit=crop&q=80' }}"
+        <img src="{{ $author->cover_image ? asset($author->cover_image) : asset('images/defaults/cover.svg') }}"
              alt="{{ $author->name }} Cover"
              style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85;">
         <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(9, 13, 22, 0.75) 100%);"></div>
@@ -37,7 +37,7 @@
 
             {{-- Left: Overlapping Avatar & Primary Info --}}
             <div style="display: flex; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap;">
-                <img src="{{ $author->avatar }}"
+                <img src="{{ asset($author->avatar) }}"
                      alt="{{ $author->name }}"
                      style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid var(--bg-surface); box-shadow: var(--shadow-lg); background: var(--bg-surface);">
 
@@ -167,7 +167,7 @@
                 @foreach ($articles as $article)
                 <article class="article-card reveal-item">
                     <div class="article-card-media">
-                        <img src="{{ $article->image }}" alt="{{ $article->title }}" loading="lazy">
+                        <img src="{{ asset($article->image) }}" alt="{{ $article->title }}" loading="lazy">
                         <div class="article-card-badge">
                             <span class="category-pill {{ $article->category->color ?? 'crimson' }}">
                                 {{ $article->category->name }}

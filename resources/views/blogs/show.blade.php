@@ -44,7 +44,7 @@
 
                 {{-- Author Info --}}
                 <div style="display: flex; align-items: center; gap: 0.85rem;">
-                    <img src="{{ $article->author_avatar ?? 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80' }}" alt="{{ $article->author_name }}" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--bg-surface-alt);">
+                    <img src="{{ $article->author_avatar ? asset($article->author_avatar) : asset('images/defaults/avatar.svg') }}" alt="{{ $article->author_name }}" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--bg-surface-alt);">
                     <div>
                         <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">{{ $article->author_name }}</div>
                         <div style="font-size: 0.8rem; color: var(--text-muted);">
@@ -85,7 +85,7 @@
          ════════════════════════════════════════════════════════════ --}}
     <div class="container container-narrow" style="margin-top: 2rem;">
         <div style="position: relative; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border-subtle);" class="reveal-item">
-            <img src="{{ $article->image }}" alt="{{ $article->title }}" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;">
+            <img src="{{ asset($article->image) }}" alt="{{ $article->title }}" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover;">
         </div>
     </div>
 
@@ -116,7 +116,7 @@
                  4. AUTHOR EXPANDED PROFILE CARD
                  ════════════════════════════════════════════════════════════ --}}
             <div class="author-bio-card reveal-item" style="margin-top: 3rem; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: 2rem; display: flex; align-items: flex-start; gap: 1.5rem; box-shadow: var(--shadow-sm);">
-                <img src="{{ $article->author_avatar ?? 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&auto=format&fit=crop&q=80' }}" alt="{{ $article->author_name }}" style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 3px solid var(--bg-surface-alt);">
+                <img src="{{ $article->author_avatar ? asset($article->author_avatar) : asset('images/defaults/avatar.svg') }}" alt="{{ $article->author_name }}" style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 3px solid var(--bg-surface-alt);">
                 <div>
                     <div style="font-size: 0.75rem; font-weight: 700; color: var(--brand-accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.2rem;">Written By</div>
                     <h3 style="font-size: 1.3rem; margin-bottom: 0.3rem; color: var(--text-primary);">{{ $article->author_name }}</h3>
@@ -160,7 +160,7 @@
                         <div class="comment-item-card reveal-item" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-sm);">
                             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
                                 <div style="display: flex; align-items: center; gap: 0.75rem;">
-                                    <img src="{{ $comment->author_avatar ?? 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80&auto=format&fit=crop&q=80' }}" alt="{{ $comment->author_name }}" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
+                                    <img src="{{ $comment->author_avatar ? asset($comment->author_avatar) : asset('images/defaults/avatar.svg') }}" alt="{{ $comment->author_name }}" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
                                     <div>
                                         <div style="font-size: 0.92rem; font-weight: 700; color: var(--text-primary);">{{ $comment->author_name }}</div>
                                         <div style="font-size: 0.76rem; color: var(--text-muted);">{{ $comment->created_at->diffForHumans() }}</div>
@@ -273,7 +273,7 @@
                     @foreach ($relatedArticles as $rel)
                         <article class="article-card reveal-item">
                             <div class="article-card-media">
-                                <img src="{{ $rel->image }}" alt="{{ $rel->title }}" loading="lazy">
+                                <img src="{{ asset($rel->image) }}" alt="{{ $rel->title }}" loading="lazy">
                                 <div class="article-card-badge">
                                     <span class="category-pill {{ $rel->category->color ?? 'crimson' }}">
                                         {{ $rel->category->name }}
@@ -289,7 +289,7 @@
                                 <p class="article-card-excerpt">{{ $rel->excerpt }}</p>
                                 <div class="article-card-footer">
                                     <div class="article-card-author">
-                                        <img src="{{ $rel->author_avatar ?? 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&auto=format&fit=crop&q=80' }}" alt="{{ $rel->author_name }}">
+                                        <img src="{{ $rel->author_avatar ? asset($rel->author_avatar) : asset('images/defaults/avatar.svg') }}" alt="{{ $rel->author_name }}">
                                         <div>
                                             <div class="author-name-text">{{ $rel->author_name }}</div>
                                             <div class="article-date-text">{{ $rel->published_at ? $rel->published_at->format('M d, Y') : $rel->created_at->format('M d, Y') }}</div>

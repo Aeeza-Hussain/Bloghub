@@ -103,7 +103,7 @@ class BlogController extends Controller
 
         // Generate an avatar placeholder from initials or default photo
         $validated['article_id'] = $article->id;
-        $validated['author_avatar'] = 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80';
+        $validated['author_avatar'] = '/images/avatars/avatar-1.svg';
 
         Comment::create($validated);
 

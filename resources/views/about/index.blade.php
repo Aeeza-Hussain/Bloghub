@@ -42,7 +42,7 @@
 
             {{-- Media Stack with Floating Glass Metric Card --}}
             <div class="story-media-stack reveal-item">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1000&auto=format&fit=crop&q=80" alt="BlogHub Editorial Team Working" class="story-primary-img">
+                <img src="{{ asset('images/about/team.svg') }}" alt="BlogHub Editorial Team Working" class="story-primary-img">
                 <div class="story-floating-card">
                     <div class="story-icon-badge">
                         <i class="bi bi-graph-up-arrow"></i>
@@ -141,7 +141,7 @@
         <div class="author-grid">
             @foreach ($team as $member)
             <div class="author-card reveal-item" style="text-align: left; align-items: flex-start;">
-                <img src="{{ $member['avatar'] }}" alt="{{ $member['name'] }}" class="author-card-avatar" style="width: 80px; height: 80px; margin-bottom: 1.1rem;" loading="lazy">
+                <img src="{{ asset($member['avatar']) }}" alt="{{ $member['name'] }}" class="author-card-avatar" style="width: 80px; height: 80px; margin-bottom: 1.1rem;" loading="lazy">
                 <h3 class="author-card-name">{{ $member['name'] }}</h3>
                 <div class="author-card-role" style="margin-bottom: 0.35rem;">{{ $member['role'] }}</div>
                 <div style="font-size: 0.76rem; color: var(--text-faint); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.3rem;">

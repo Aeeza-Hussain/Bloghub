@@ -94,7 +94,7 @@
                     {{-- Avatar & Badge --}}
                     <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 1.1rem;">
                         <a href="{{ route('authors.show', $author->slug) }}">
-                            <img src="{{ $author->avatar }}" alt="{{ $author->name }}" class="author-card-avatar" style="width: 76px; height: 76px; margin-bottom: 0;">
+                            <img src="{{ asset($author->avatar) }}" alt="{{ $author->name }}" class="author-card-avatar" style="width: 76px; height: 76px; margin-bottom: 0;">
                         </a>
                         <button type="button" class="btn-follow">
                             <i class="bi bi-plus"></i> Follow
