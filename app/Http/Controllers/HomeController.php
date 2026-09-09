@@ -25,7 +25,7 @@ class HomeController extends Controller
             'author'       => 'Aleeza Fatima',
             'author_role'  => 'Founder & Staff Architect',
             'author_avatar' => '/images/avatars/avatar-2.svg',
-            'image'         => '/images/covers/cover-2.svg',
+            'image'         => '/images/covers/cover-2.jpg',
             'date'         => 'Aug 26, 2026',
             'read'         => '8 min read',
             'views'        => '4.2k',
@@ -40,7 +40,7 @@ class HomeController extends Controller
                 'category'     => 'PHP & Laravel',
                 'author'       => 'Sania Fida',
                 'author_avatar' => '/images/avatars/avatar-3.svg',
-                'image'         => '/images/covers/cover-3.svg',
+                'image'         => '/images/covers/cover-3.jpg',
                 'date'         => 'Aug 24, 2026',
                 'read'         => '6 min read',
                 'views'        => '2.8k',
@@ -53,7 +53,7 @@ class HomeController extends Controller
                 'category'     => 'UI/UX & CSS',
                 'author'       => 'Sana Akbar',
                 'author_avatar' => '/images/avatars/avatar-4.svg',
-                'image'         => '/images/covers/cover-4.svg',
+                'image'         => '/images/covers/cover-4.jpg',
                 'date'         => 'Aug 21, 2026',
                 'read'         => '7 min read',
                 'views'        => '3.5k',
@@ -66,7 +66,7 @@ class HomeController extends Controller
                 'category'     => 'JavaScript',
                 'author'       => 'Amna Kiran',
                 'author_avatar' => '/images/avatars/avatar-5.svg',
-                'image'         => '/images/covers/cover-5.svg',
+                'image'         => '/images/covers/cover-5.jpg',
                 'date'         => 'Aug 19, 2026',
                 'read'         => '5 min read',
                 'views'        => '5.1k',
@@ -228,6 +228,6 @@ class HomeController extends Controller
             ],
         ];
 
-        return view('home.index', compact('heroArticle', 'featuredPosts', 'trendingPosts', 'categories', 'authors', 'stats', 'testimonials'));
+        return view('home', compact('heroArticle', 'featuredPosts', 'trendingPosts', 'categories', 'authors', 'stats', 'testimonials'));
     }
 }

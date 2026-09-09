@@ -80,7 +80,7 @@
                     <a href="{{ route('contact') }}" class="btn btn-primary">
                         <i class="bi bi-pencil-square"></i> Pitch an Article
                     </a>
-                    <a href="{{ route('home') }}#articles" class="btn btn-secondary">
+                    <a href="{{ route('blogs.index') }}" class="btn btn-secondary">
                         Browse Publications
                     </a>
                 </div>

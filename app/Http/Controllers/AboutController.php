@@ -110,6 +110,6 @@ class AboutController extends Controller
             ],
         ];
 
-        return view('about.index', compact('values', 'team', 'milestones'));
+        return view('about', compact('values', 'team', 'milestones'));
     }
 }

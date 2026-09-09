@@ -39,6 +39,6 @@ class SearchController extends Controller
             ->take(6)
             ->get();
 
-        return view('search.index', compact('articles', 'query', 'suggestedCategories'));
+        return view('search', compact('articles', 'query', 'suggestedCategories'));
     }
 }

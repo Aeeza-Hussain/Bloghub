@@ -35,7 +35,7 @@ class ContactController extends Controller
             ],
         ];
 
-        return view('contact.index', compact('faqs'));
+        return view('contact', compact('faqs'));
     }
 
     /**

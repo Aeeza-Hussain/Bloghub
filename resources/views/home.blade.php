@@ -29,7 +29,7 @@
                 </p>
 
                 <div class="hero-cta-group reveal-item">
-                    <a href="#articles" class="btn btn-primary btn-lg">
+                    <a href="{{ route('blogs.index') }}" class="btn btn-primary btn-lg">
                         <span>Read Featured Articles</span>
                         <i class="bi bi-arrow-down"></i>
                     </a>
@@ -74,7 +74,7 @@
                         </div>
 
                         <h2 class="spotlight-title">
-                            <a href="#articles">{{ $heroArticle['title'] }}</a>
+                            <a href="{{ route('blogs.index') }}">{{ $heroArticle['title'] }}</a>
                         </h2>
 
                         <p class="spotlight-excerpt">
@@ -112,7 +112,7 @@
             <div class="trending-item reveal-item">
                 <span class="trending-rank">{{ $trend['rank'] }}</span>
                 <div class="trending-content">
-                    <h4><a href="#articles">{{ $trend['title'] }}</a></h4>
+                    <h4><a href="{{ route('blogs.index') }}">{{ $trend['title'] }}</a></h4>
                     <div class="trending-meta">
                         <span><i class="bi bi-tag"></i> {{ $trend['category'] }}</span>
                         <span>&bull;</span>
@@ -138,7 +138,7 @@
                 <p class="section-desc">Practical, real-world tutorials with source code, benchmarks, and actionable design decisions.</p>
             </div>
             <div>
-                <a href="{{ route('about') }}" class="btn btn-outline">
+                <a href="{{ route('blogs.index') }}" class="btn btn-outline">
                     <span>Explore All 250+ Articles</span>
                     <i class="bi bi-arrow-right"></i>
                 </a>
@@ -157,7 +157,7 @@
 
                 <div class="article-card-body">
                     <h3 class="article-card-title">
-                        <a href="{{ route('about') }}">{{ $post['title'] }}</a>
+                        <a href="{{ route('blogs.index') }}">{{ $post['title'] }}</a>
                     </h3>
                     <p class="article-card-excerpt">
                         {{ $post['excerpt'] }}
@@ -198,7 +198,7 @@
 
         <div class="category-grid">
             @foreach ($categories as $category)
-            <a href="#articles" class="category-card reveal-item">
+            <a href="{{ route('categories.index') }}" class="category-card reveal-item">
                 <div class="category-icon-box">
                     <i class="bi {{ $category['icon'] }}"></i>
                 </div>
@@ -227,9 +227,9 @@
                 <p class="section-desc">Staff engineers, open-source maintainers, and seasoned leads sharing real battle-tested practices.</p>
             </div>
             <div>
-                <a href="{{ route('contact') }}" class="btn btn-secondary">
+                <a href="{{ route('authors.index') }}" class="btn btn-secondary">
                     <i class="bi bi-pencil-square"></i>
-                    <span>Apply as Contributor</span>
+                    <span>All Contributors</span>
                 </a>
             </div>
         </div>

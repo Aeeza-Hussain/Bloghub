@@ -18,6 +18,6 @@ class CategoryController extends Controller
             ->orderBy('articles_count', 'desc')
             ->get();
 
-        return view('categories.index', compact('categories'));
+        return view('categories', compact('categories'));
     }
 }

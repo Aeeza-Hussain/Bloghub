@@ -40,7 +40,7 @@
     <div class="scroll-progress" id="scrollProgressBar"></div>
 
     {{-- ── Site Header / Navigation ──────────────────────────────── --}}
-    @include('partials.navbar')
+    @include('components.navbar')
 
     {{-- ── Main Content Container ────────────────────────────────── --}}
     <main>
@@ -48,7 +48,7 @@
     </main>
 
     {{-- ── Site Footer ───────────────────────────────────────────── --}}
-    @include('partials.footer')
+    @include('components.footer')
 
     {{-- Back to Top Floating Button --}}
     <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Back to top">
